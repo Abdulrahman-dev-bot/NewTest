@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C/C++: build",
+      "type": "process",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-g",
+        "${workspaceFolder}/main.cpp",
+        "-o",
+        "${workspaceFolder}/output/main.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "C/C++: run",
+      "type": "process",
+      "command": "${workspaceFolder}/output/main.exe",
+      "dependsOn": "C/C++: build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
