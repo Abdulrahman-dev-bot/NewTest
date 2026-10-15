@@ -2,14 +2,12 @@
 #include <iostream>
 #include <string>
 
-int main() {
-    std::string name;
+using namespace std
 
-    std::cout << "Welcome to my first C++ project!\n";
-    std::cout << "Enter your name: ";
-    std::getline(std::cin, name);
+void main() {
 
-    std::cout << "Hello, " << name << "!\n";
 
+    cout << "\n";
+   
     return 0;
 }
